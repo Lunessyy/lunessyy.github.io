@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #245c43 0%, #2d6f52 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .project {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #245c43 0%, #2d6f52 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3em;
+    }
+    
+    .project-content {
+      padding: 25px;
+    }
+    
+    .project h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #245c43;
+    }
+    
+    .project p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95em;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #245c43;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+    
+    .btn:hover {
+      background: #2d6f52;
+    }
+    
+    .btn-secondary {
+      background: #f0f0f0;
+      color: #333;
+      border: 1px solid #ddd;
+    }
+    
+    .btn-secondary:hover {
+      background: #e0e0e0;
+    }
+    
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hej! Jag är [Ditt namn]</h1>
+    <p>Fullstack-utvecklare • Next.js • React • Node.js</p>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2em;">Mina Projekt</h2>
+    
+    <div class="projects">
+      <!-- Projekt 1 -->
+      <div class="project">
+        <div class="project-image">🛒</div>
+        <div class="project-content">
+          <h3>Surahammars Online Loppis</h3>
+          <p>E-handel för secondhand med moderna funktioner som tvåstegsverifikation vid kontoborttagning, meddelandehantering mellan köpare och säljare, och favoriter. Målgrupp 40-70 år med fokus på tydlig design och hög kontrast.</p>
+          <div class="project-links">
+            <a href="https://din-demo-länk.com" class="btn">Se Live →</a>
+            <a href="https://github.com/USERNAME/shkokos-loppis" class="btn btn-secondary">GitHub</a>
+          </div>
+          <p style="font-size: 0.85em; margin-top: 15px; color: #999;">
+            <strong>Stack:</strong> Next.js • React • Prisma • MariaDB • Tailwind CSS
+          </p>
+        </div>
+      </div>
+
+      <!-- Lägg till fler projekt här -->
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ • <a href="https://github.com/USERNAME" style="color: #fff;">GitHub</a></p>
+  </footer>
+</body>
+</html>
