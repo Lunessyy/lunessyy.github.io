@@ -402,6 +402,16 @@ a {
   width: 100%;
   height: auto;
 }
+/* Används för projekt utan skärmdump - ett ikonfält istället för en bild,
+   så kortet inte ser ut att sakna innehåll. */
+.project-media-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface));
+}
 .project-body {
   padding: 2rem;
 }

@@ -54,12 +54,13 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="wrap hero-inner">
-        <p class="eyebrow reveal">Fullstack-utvecklare</p>
+        <p class="eyebrow reveal">Pythonutvecklare inom AI</p>
         <!-- REDIGERA: ditt namn -->
-        <h1 class="reveal">Hej, jag är Didar Aref.</h1>
+        <h1 class="reveal">Didar Aref</h1>
         <p class="hero-lede reveal">
-          Jag bygger genomtänkta webbapplikationer från idé till driftsatt produkt —
-          med fokus på tydlig UX, säker autentisering och kod som går att underhålla.
+          Jag bygger backend-system med fokus på data, databaser och machine learning —
+          från databehandling med Python till modeller som faktiskt löser problem.
+
         </p>
         <div class="hero-actions reveal">
           <a href="#projekt" class="btn btn-primary">Se mina projekt</a>
@@ -67,7 +68,7 @@
         </div>
         <div class="hero-links reveal">
           <!-- REDIGERA: dina riktiga länkar -->
-          <a href="https://github.com/USERNAME" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Lunessyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 5.02 3.26 9.28 7.77 10.78.57.1.78-.25.78-.55v-2.15c-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.74 0c2.18-1.47 3.14-1.16 3.14-1.16.63 1.57.23 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.11v3.13c0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
           </a>
           <a href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -89,27 +90,26 @@
         </div>
 
         <div class="about-grid">
-          <!-- REDIGERA: skriv om det här stycket med din egen bakgrund/röst -->
           <p class="about-text reveal">
-            Jag är utvecklare med fokus på webbapplikationer som känns genomtänkta hela
-            vägen — från datamodell och säkerhet i backend till detaljer i gränssnittet
-            som gör att riktiga användare faktiskt förstår vad de ska göra. Jag gillar
-            att bygga färdigt: inte bara en fungerande prototyp, utan produkter med
-            felhantering, valideringar och en design som håller för en verklig
-            målgrupp.
+            Jag studerar mjukvaruutveckling med inriktning mot Python och AI, och söker
+            en LIA-praktik där jag kan omsätta det jag lärt mig i en verklig
+            utvecklingsmiljö. Jag tycker om att förstå hur data hänger ihop — från att
+            samla in och rensa ett dataset till att träna en modell som faktiskt löser
+            ett problem, inte bara fungerar i teorin. Jag gillar att gå på djupet:
+            förstå varför en lösning fungerar, inte bara att den gör det.
           </p>
           <ul class="about-facts reveal">
             <li>
               <span class="fact-label">Fokus</span>
-              <span>Fullstack-utveckling, autentisering, UX för icke-tekniska användare</span>
+              <span>Pythonutveckling, maskininlärning, deep learning</span>
             </li>
             <li>
               <span class="fact-label">Verktyg</span>
-              <span>Next.js, React, TypeScript, Prisma, SQL</span>
+              <span>Python, MySQL, Machine Learning, Deep Learning</span>
             </li>
             <li>
-              <span class="fact-label">Bas</span>
-              <span>Sverige</span>
+              <span class="fact-label">Söker</span>
+              <span>LIA-praktik</span>
             </li>
           </ul>
         </div>
@@ -168,11 +168,57 @@
             </div>
           </article>
 
-          <!-- REDIGERA: kopiera <article class="project"> ovan för fler projekt -->
+          <!-- Projekt 2: Hotellbokningssystem -->
+          <article class="project reveal">
+            <div class="project-media project-media-icon" aria-hidden="true">🏨</div>
+            <div class="project-body">
+              <h3>Hotellbokningssystem</h3>
+              <p>
+                Backend i Python för att hantera ett hotells bokningar: gästregistrering,
+                bokningsskapande, betalningsregistrering och kontroll av lediga rum.
+                SQLAlchemy som ORM mot en MySQL-databas, med Alembic för
+                databasmigrationer.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>SQLAlchemy</li>
+                <li>MySQL</li>
+                <li>Alembic</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Lunessyy/Hotel_booking" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Källkod</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projekt 3: Banksystem -->
+          <article class="project reveal">
+            <div class="project-media project-media-icon" aria-hidden="true">🏦</div>
+            <div class="project-body">
+              <h3>Banksystem</h3>
+              <p>
+                Webbaserat banksystem byggt med Flask. Användarautentisering med
+                Flask-Login, datamodeller och databasmigrationer hanterade med
+                SQLAlchemy och Flask-Migrate, mot en MySQL-databas. Testat med pytest.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>SQLAlchemy</li>
+                <li>MySQL</li>
+                <li>pytest</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Lunessyy/banksystem" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Källkod</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- REDIGERA: kopiera ett <article class="project"> block ovan för fler projekt -->
           <article class="project project-placeholder reveal">
             <div class="project-body project-placeholder-body">
               <h3>Nästa projekt</h3>
-              <p>Kopiera projektkortet ovan och fyll i ditt nästa arbete här.</p>
+              <p>Kopiera ett projektkort ovan och fyll i ditt nästa arbete här.</p>
             </div>
           </article>
 
@@ -190,38 +236,34 @@
 
         <div class="skills-grid reveal">
           <div class="skill-group">
-            <h3>Frontend</h3>
+            <h3>Python</h3>
             <ul class="tag-list">
-              <li>React</li>
-              <li>Next.js</li>
-              <li>TypeScript</li>
-              <li>Tailwind CSS</li>
+              <li>Python</li>
+              <li>Backend-utveckling</li>
+              <li>Databehandling</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Backend</h3>
+            <h3>Data &amp; ML</h3>
             <ul class="tag-list">
-              <li>Node.js</li>
-              <li>Prisma</li>
-              <li>REST-API:er</li>
-              <li>Autentisering &amp; sessioner</li>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>Dataanalys</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Data</h3>
+            <h3>Databaser</h3>
             <ul class="tag-list">
-              <li>MySQL / MariaDB</li>
-              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>SQL</li>
               <li>Datamodellering</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Verktyg</h3>
+            <h3>Webb</h3>
             <ul class="tag-list">
-              <li>Git</li>
-              <li>Vercel</li>
-              <li>Playwright</li>
-              <li>ESLint</li>
+              <li>HTML</li>
+              <li>CSS</li>
             </ul>
           </div>
         </div>
@@ -235,14 +277,13 @@
           <p class="eyebrow">Kontakt</p>
           <h2>Hör gärna av dig</h2>
           <p class="contact-lede">
-            Söker du en utvecklare, eller vill du bara diskutera något av projekten
-            ovan? Skicka ett mejl så återkommer jag.
+            Söker du en utvecklare, skicka gärna iväg en DM på LinkedIn isåfall.
           </p>
           <div class="contact-actions">
             <!-- REDIGERA: din riktiga e-post -->
-            <a href="mailto:din@epost.se" class="btn btn-primary">Skicka e-post</a>
-            <a href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
-            <a href="https://github.com/USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+            <!-- <a href="mailto:din@epost.se" class="btn btn-primary">Skicka e-post</a> -->
+            <a href="https://www.linkedin.com/in/didar-aref-336bb2273/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn</a>
+            <a href="https://github.com/Lunessyy" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
           </div>
         </div>
       </div>
