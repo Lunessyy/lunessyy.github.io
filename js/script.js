@@ -46,4 +46,83 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => observer.observe(el));
   }
   // Annars: gör ingenting. Elementen har redan sin vanliga, synliga CSS.
+
+  // Lightbox: klicka på en projektbild för att förstora den. Varje
+  // .project-media-behållare kan innehålla flera bilder (den första synlig
+  // som omslag, resten dolda med [hidden]) - i lightboxen kan man bläddra
+  // mellan alla bilder som hör till samma projekt med pil-knappar.
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+  const lightboxPrev = document.getElementById("lightboxPrev");
+  const lightboxNext = document.getElementById("lightboxNext");
+  const lightboxCounter = document.getElementById("lightboxCounter");
+  const galleries = document.querySelectorAll(".project-media");
+
+  if (lightbox && lightboxImg && lightboxClose && galleries.length) {
+    let lastFocused = null;
+    let currentImages = [];
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+      currentIndex = (index + currentImages.length) % currentImages.length;
+      const img = currentImages[currentIndex];
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      const multiple = currentImages.length > 1;
+      lightboxPrev.hidden = !multiple;
+      lightboxNext.hidden = !multiple;
+      lightboxCounter.hidden = !multiple;
+      if (multiple) {
+        lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+      }
+    };
+
+    const openLightbox = (images, index) => {
+      lastFocused = document.activeElement;
+      currentImages = images;
+      showImage(index);
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    };
+
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      lightboxImg.src = "";
+      document.body.classList.remove("lightbox-open");
+      if (lastFocused) lastFocused.focus();
+    };
+
+    galleries.forEach((gallery) => {
+      const images = Array.from(gallery.querySelectorAll("img"));
+      if (!images.length) return;
+
+      images.forEach((img, index) => {
+        img.tabIndex = 0;
+        img.setAttribute("role", "button");
+        img.setAttribute("aria-label", `Förstora bild: ${img.alt}`);
+        img.addEventListener("click", () => openLightbox(images, index));
+        img.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLightbox(images, index);
+          }
+        });
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", () => showImage(currentIndex - 1));
+    lightboxNext.addEventListener("click", () => showImage(currentIndex + 1));
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+      if (e.key === "ArrowRight") showImage(currentIndex + 1);
+    });
+  }
 });
